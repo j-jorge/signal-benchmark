@@ -1,3 +1,6 @@
 [submodule "libraries/fgsig"]
 	path = libraries/fgsig
 	url = https://github.com/fgoujeon/signal.git
+[submodule "libraries/wfl"]
+	path = libraries/wfl
+	url = https://github.com/j-jorge/weak-function.git
