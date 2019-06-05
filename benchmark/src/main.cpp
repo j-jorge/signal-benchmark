@@ -2,6 +2,7 @@
 #include "tester_policies/c_style.hpp"
 #include "tester_policies/fgsig.hpp"
 #include "tester_policies/sigc.hpp"
+#include "tester_policies/wfl.hpp"
 #include <chrono>
 #include <vector>
 #include <sstream>
@@ -53,6 +54,7 @@ void test_all(const int receiver_count, const int event_count)
     test<fgsig_tester_policy>(receiver_count, event_count);
     test<sigc_tester_policy>(receiver_count, event_count);
     test<boost_tester_policy>(receiver_count, event_count);
+    test<wfl_tester_policy>(receiver_count, event_count);
     std::cout << '\n';
 }
 
