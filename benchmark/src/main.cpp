@@ -3,6 +3,7 @@
 #include "tester_policies/fgsig.hpp"
 #include "tester_policies/fteng.hpp"
 #include "tester_policies/iscool.hpp"
+#include "tester_policies/shared_ptr.hpp"
 #include "tester_policies/sigc.hpp"
 #include "tester_policies/wfl.hpp"
 #include <chrono>
@@ -57,6 +58,7 @@ void test_all(const int receiver_count, const int event_count)
     test<fgsig_tester_policy>(receiver_count, event_count);
     test<fteng_tester_policy>(receiver_count, event_count);
     test<iscool_tester_policy>(receiver_count, event_count);
+    test<shared_ptr_tester_policy>(receiver_count, event_count);
     test<sigc_tester_policy>(receiver_count, event_count);
     test<wfl_tester_policy>(receiver_count, event_count);
 
