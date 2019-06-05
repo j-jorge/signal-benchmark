@@ -11,9 +11,6 @@ struct wfl_tester_policy
     struct event_sender
     {
         public:
-            using signal = boost::signals2::signal<void(int)>;
-
-        public:
             event_sender()
             {
                 callbacks_.reserve( 10000000 );
