@@ -1,6 +1,7 @@
 #include "tester_policies/boost.hpp"
 #include "tester_policies/c_style.hpp"
 #include "tester_policies/fgsig.hpp"
+#include "tester_policies/fteng.hpp"
 #include "tester_policies/iscool.hpp"
 #include "tester_policies/sigc.hpp"
 #include <chrono>
@@ -51,9 +52,10 @@ void test_all(const int receiver_count, const int event_count)
 {
     std::cout << receiver_count << " receivers, " << event_count << " events:\n";
     test<iscool_tester_policy>(receiver_count, event_count);
-#if 1
+#if 0
     test<c_style_tester_policy>(receiver_count, event_count);
     test<fgsig_tester_policy>(receiver_count, event_count);
+    test<fteng_tester_policy>(receiver_count, event_count);
     test<sigc_tester_policy>(receiver_count, event_count);
     test<boost_tester_policy>(receiver_count, event_count);
 #endif
@@ -64,6 +66,6 @@ void test_all(const int receiver_count, const int event_count)
 int main()
 {
     test_all(1, 1e8);
-    //test_all(10, 1e8);
-    //test_all(1e7, 10);
+    test_all(10, 1e8);
+    test_all(1e7, 10);
 }
